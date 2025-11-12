@@ -274,6 +274,7 @@ app.get('/api/users/search', authMiddleware, async (req, res) => {
                 { username: { $regex: regex } },
                 { email: { $regex: regex } }
             ]
+            //new changed
         })
         .select('username email _id') // Only return necessary fields
         .limit(10); // Limit results for performance
